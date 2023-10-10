@@ -8,7 +8,7 @@ import { Avatar, Card } from "antd";
 import Image from "next/image";
 const { Meta } = Card;
 
-const ProductCard = ({ product }) => (
+const ProductCard = ({ product, key }) => (
   <Card
     style={{
       width: 300,
@@ -30,7 +30,7 @@ const ProductCard = ({ product }) => (
       title={product?.name}
       description={product?.description}
     />
-    <div>
+    <div key={product?.id}>
       <p>{product?.status}</p>
       <p>{`Price: $${product?.price}`}</p>
       <p>Category : {product?.category}</p>

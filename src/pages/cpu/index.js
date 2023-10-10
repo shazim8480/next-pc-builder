@@ -14,7 +14,7 @@ const CPUPage = ({ products }) => {
         console.log("filtered", product);
         return (
           <Col key={index} className="gutter-row" span={6}>
-            <ProductCard product={product} />
+            <ProductCard key={index} product={product} />
           </Col>
         );
       })}

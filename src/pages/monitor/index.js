@@ -13,8 +13,8 @@ const MonitorPage = ({ products }) => {
       {filteredProducts?.map((product, index) => {
         console.log("filtered", product);
         return (
-          <Col key={index} className="gutter-row" span={6}>
-            <ProductCard product={product} />
+          <Col key={product?.id} className="gutter-row" span={6}>
+            <ProductCard key={product?.id} product={product} />
           </Col>
         );
       })}
