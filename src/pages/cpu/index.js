@@ -13,8 +13,8 @@ const CPUPage = ({ products }) => {
       {filteredProducts?.map((product, index) => {
         console.log("filtered", product);
         return (
-          <Col className="gutter-row" span={6}>
-            <ProductCard key={index} product={product} />
+          <Col key={index} className="gutter-row" span={6}>
+            <ProductCard product={product} />
           </Col>
         );
       })}
