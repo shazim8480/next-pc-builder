@@ -89,6 +89,20 @@ const items = [
       </Link>
     ),
   },
+  {
+    key: "7",
+    label: (
+      <Link href="/others">
+        <items
+          style={{
+            margin: "0px 25px",
+          }}
+        >
+          Others
+        </items>
+      </Link>
+    ),
+  },
 ];
 
 const RootLayout = ({ children }) => {
@@ -151,14 +165,13 @@ const RootLayout = ({ children }) => {
       </Header>
       <Content
         style={{
-          padding: "0 10px",
-          marginTop: "30px",
+          padding: "30px 10px",
         }}
       >
         <div
           className="site-layout-content"
           style={{
-            background: colorBgContainer,
+            background: "white",
             height: "100vh",
           }}
         >

@@ -4,9 +4,9 @@ import { Col, Row } from "antd";
 import { useRouter } from "next/router";
 import React from "react";
 
-const CPUPage = ({ products }) => {
+const OthersPage = ({ products }) => {
   const filteredProducts = products?.filter(
-    (product) => product?.category === "cpu"
+    (product) => product?.category === "others"
   );
   return (
     <Row gutter={32}>
@@ -22,9 +22,9 @@ const CPUPage = ({ products }) => {
   );
 };
 
-export default CPUPage;
+export default OthersPage;
 
-CPUPage.getLayout = function getLayout(page) {
+OthersPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
