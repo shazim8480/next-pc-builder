@@ -1,0 +1,163 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Intel Core i7-9700K",
+      "category": "cpu",
+      "status": "In Stock",
+      "price": 329.99,
+      "description": "9th Gen, 8 Cores, 8 Threads",
+      "keyFeatures": ["Brand: Intel", "Cores: 8", "Threads: 8"],
+      "individualRating": 4.5,
+      "averageRating": 4.3
+    },
+    {
+      "id": "2",
+      "name": "AMD Ryzen 5 3600X",
+      "category": "cpu",
+      "status": "In Stock",
+      "price": 249.99,
+      "description": "3rd Gen, 6 Cores, 12 Threads",
+      "keyFeatures": ["Brand: AMD", "Cores: 6", "Threads: 12"],
+      "individualRating": 4.8,
+      "averageRating": 4.5
+    },
+    {
+      "id": "3",
+      "name": "MSI B450 TOMAHAWK MAX",
+      "category": "motherboard",
+      "status": "In Stock",
+      "price": 124.99,
+      "description": "ATX, AMD B450, DDR4, USB 3.2 Gen 2",
+      "keyFeatures": ["Brand: MSI", "Form Factor: ATX", "Socket: AM4"],
+      "individualRating": 4.6,
+      "averageRating": 4.4
+    },
+    {
+      "id": "4",
+      "name": "Corsair Vengeance LPX 16GB",
+      "category": "ram",
+      "status": "In Stock",
+      "price": 79.99,
+      "description": "DDR4 3200MHz, C16, 1.35V",
+      "keyFeatures": ["Brand: Corsair", "Capacity: 16GB", "Speed: 3200MHz"],
+      "individualRating": 4.7,
+      "averageRating": 4.6
+    },
+    {
+      "id": "5",
+      "name": "EVGA SuperNOVA 650 G5",
+      "category": "psu",
+      "status": "In Stock",
+      "price": 99.99,
+      "description": "80 Plus Gold, Fully Modular, Eco Mode",
+      "keyFeatures": [
+        "Brand: EVGA",
+        "Wattage: 650W",
+        "Certification: 80 Plus Gold"
+      ],
+      "individualRating": 4.9,
+      "averageRating": 4.8
+    },
+    {
+      "id": "6",
+      "name": "Samsung 970 EVO Plus 1TB",
+      "category": "storage",
+      "status": "In Stock",
+      "price": 149.99,
+      "description": "NVMe M.2 Internal SSD",
+      "keyFeatures": ["Brand: Samsung", "Capacity: 1TB", "Interface: NVMe"],
+      "individualRating": 4.8,
+      "averageRating": 4.7
+    },
+    {
+      "id": "7",
+      "name": "Dell S2419HGF 24-Inch Gaming Monitor",
+      "category": "monitor",
+      "status": "In Stock",
+      "price": 199.99,
+      "description": "1080p Free Sync",
+      "keyFeatures": [
+        "Brand: Dell",
+        "Size: 24 inches",
+        "Resolution: 1920x1080"
+      ],
+      "individualRating": 4.5,
+      "averageRating": 4.2
+    },
+    {
+      "id": "8",
+      "name": "Logitech G Pro X Mechanical Gaming Keyboard",
+      "category": "others",
+      "status": "In Stock",
+      "price": 129.99,
+      "description": "Hot-swappable switches",
+      "keyFeatures": [
+        "Brand: Logitech",
+        "Switches: Hot-swappable",
+        "Backlight: RGB"
+      ],
+      "individualRating": 4.7,
+      "averageRating": 4.5
+    },
+    {
+      "id": "9",
+      "name": "AMD Ryzen 7 5800X",
+      "category": "cpu",
+      "status": "In Stock",
+      "price": 449.99,
+      "description": "Zen 3, 8 Cores, 16 Threads",
+      "keyFeatures": ["Brand: AMD", "Cores: 8", "Threads: 16"],
+      "individualRating": 4.9,
+      "averageRating": 4.7
+    },
+    {
+      "id": "10",
+      "name": "ASUS ROG Strix B550-F Gaming",
+      "category": "motherboard",
+      "status": "In Stock",
+      "price": 199.99,
+      "description": "ATX, AMD B550, DDR4, PCIe 4.0",
+      "keyFeatures": ["Brand: ASUS", "Form Factor: ATX", "Socket: AM4"],
+      "individualRating": 4.8,
+      "averageRating": 4.6
+    },
+    {
+      "id": "11",
+      "name": "G.Skill Ripjaws V Series 32GB",
+      "category": "ram",
+      "status": "In Stock",
+      "price": 149.99,
+      "description": "DDR4 3600MHz, C16, 1.35V",
+      "keyFeatures": ["Brand: G.Skill", "Capacity: 32GB", "Speed: 3600MHz"],
+      "individualRating": 4.7,
+      "averageRating": 4.5
+    },
+    {
+      "id": "12",
+      "name": "Seasonic Focus GX-750",
+      "category": "psu",
+      "status": "In Stock",
+      "price": 129.99,
+      "description": "80 Plus Gold, Full-Modular, Fluid Dynamic Bearing Fan",
+      "keyFeatures": [
+        "Brand: Seasonic",
+        "Wattage: 750W",
+        "Certification: 80 Plus Gold"
+      ],
+      "individualRating": 4.8,
+      "averageRating": 4.6
+    },
+    {
+      "id": "13",
+      "name": "Crucial P5 1TB NVMe SSD",
+      "category": "storage",
+      "status": "In Stock",
+      "price": 159.99,
+      "description": "NVMe M.2 Internal SSD, 3400MB/s Read, 3000MB/s Write",
+      "keyFeatures": ["Brand: Crucial", "Capacity: 1TB", "Interface: NVMe"],
+      "individualRating": 4.9,
+      "averageRating": 4.8
+    }
+  ]
+}
