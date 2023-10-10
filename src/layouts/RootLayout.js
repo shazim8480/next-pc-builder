@@ -152,6 +152,7 @@ const RootLayout = ({ children }) => {
       <Content
         style={{
           padding: "0 10px",
+          marginTop: "30px",
         }}
       >
         <div
