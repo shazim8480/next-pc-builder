@@ -10,11 +10,10 @@ const MonitorPage = ({ products }) => {
   );
   return (
     <Row gutter={32}>
-      {filteredProducts?.map((product, index) => {
-        console.log("filtered", product);
+      {filteredProducts?.map((product) => {
         return (
           <Col key={product?.id} className="gutter-row" span={6}>
-            <ProductCard key={product?.id} product={product} />
+            <ProductCard product={product} />
           </Col>
         );
       })}

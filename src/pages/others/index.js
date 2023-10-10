@@ -10,10 +10,9 @@ const OthersPage = ({ products }) => {
   );
   return (
     <Row gutter={32}>
-      {filteredProducts?.map((product, index) => {
-        console.log("filtered", product);
+      {filteredProducts?.map((product) => {
         return (
-          <Col key={index} className="gutter-row" span={6}>
+          <Col key={product?.id} className="gutter-row" span={6}>
             <ProductCard product={product} />
           </Col>
         );

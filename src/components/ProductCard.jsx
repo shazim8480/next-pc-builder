@@ -8,17 +8,15 @@ import { Avatar, Card } from "antd";
 import Image from "next/image";
 const { Meta } = Card;
 
-const ProductCard = ({ product, key }) => (
+const ProductCard = ({ product }) => (
   <Card
     style={{
       width: 300,
     }}
     size="small"
     cover={
-      <Image
+      <img
         alt="example"
-        width={50}
-        height={50}
         src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
       />
     }
@@ -30,7 +28,7 @@ const ProductCard = ({ product, key }) => (
       title={product?.name}
       description={product?.description}
     />
-    <div key={product?.id}>
+    <div>
       <p>{product?.status}</p>
       <p>{`Price: $${product?.price}`}</p>
       <p>Category : {product?.category}</p>
