@@ -2,110 +2,28 @@ import React from "react";
 import { Breadcrumb, Dropdown, Layout, Menu, Space, theme } from "antd";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import Link from "next/link";
+import { useRouter } from "next/router";
 const { Header, Content, Footer } = Layout;
 
-const items = [
-  {
-    key: "1",
-    label: (
-      <Link href="/cpu">
-        <items
-          style={{
-            margin: "0px 25px",
-          }}
-        >
-          CPU / Processor
-        </items>
-      </Link>
-    ),
-  },
-  {
-    key: "2",
-    label: (
-      <Link href="/motherboard">
-        <items
-          style={{
-            margin: "0px 25px",
-          }}
-        >
-          MotherBoard
-        </items>
-      </Link>
-    ),
-  },
-  {
-    key: "3",
-    label: (
-      <Link href="/ram">
-        <items
-          style={{
-            margin: "0px 25px",
-          }}
-        >
-          RAM
-        </items>
-      </Link>
-    ),
-  },
-  {
-    key: "4",
-    label: (
-      <Link href="/psu">
-        <items
-          style={{
-            margin: "0px 25px",
-          }}
-        >
-          PSU
-        </items>
-      </Link>
-    ),
-  },
-  {
-    key: "5",
-    label: (
-      <Link href="/storage">
-        <items
-          style={{
-            margin: "0px 25px",
-          }}
-        >
-          Storage Device
-        </items>
-      </Link>
-    ),
-  },
-  {
-    key: "6",
-    label: (
-      <Link href="/monitor">
-        <items
-          style={{
-            margin: "0px 25px",
-          }}
-        >
-          Monitor
-        </items>
-      </Link>
-    ),
-  },
-  {
-    key: "7",
-    label: (
-      <Link href="/others">
-        <items
-          style={{
-            margin: "0px 25px",
-          }}
-        >
-          Others
-        </items>
-      </Link>
-    ),
-  },
-];
-
 const RootLayout = ({ children }) => {
+  const router = useRouter();
+
+  // Handle menu item selection
+  const handleMenuClick = (e) => {
+    const { key } = e;
+    router.push(`/category/${encodeURIComponent(key)}`);
+  };
+
+  const categories = [
+    "cpu",
+    "motherboard",
+    "ram",
+    "psu",
+    "storage",
+    "monitor",
+    "others",
+  ];
+
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -117,62 +35,47 @@ const RootLayout = ({ children }) => {
           alignItems: "center",
         }}
       >
-        <div className="demo-logo" />
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          // className={{
-          //   fontSize: "18px",
-          //   textDecoration: "none",
-          //   color: "white",
-          // }}
-        >
-          <Link href="/">
-            <items
-              style={{
-                color: "white",
-                textTransform: "uppercase",
-                fontWeight: "700",
-                fontSize: 20,
-                marginRight: 25,
-              }}
-            >
-              NEXT PC Builder
-            </items>
-          </Link>
-          <Dropdown
-            menu={{
-              items,
+        {/* <div className="demo-logo" /> */}
+
+        <Link href="/">
+          <items
+            style={{
+              color: "white",
+              textTransform: "uppercase",
+              fontWeight: "700",
+              fontSize: 20,
+              marginRight: 25,
             }}
           >
-            <a onClick={(e) => e.preventDefault()}>
-              <Space>
-                Categories
-                <DownOutlined />
-              </Space>
-            </a>
-          </Dropdown>
-          <Link href="/pcBuilder">
-            <items
-              style={{
-                margin: "0px 25px",
-              }}
-            >
-              PC Builder
-            </items>
-          </Link>
+            NEXT PC Builder
+          </items>
+        </Link>
+        <Menu title="Categories" theme="dark" mode="horizontal">
+          <Menu.SubMenu key="categories-dropdown" title="Categories">
+            {categories?.map((category) => (
+              <Menu.Item key={category} onClick={handleMenuClick}>
+                {category.toLocaleUpperCase()}
+              </Menu.Item>
+            ))}
+          </Menu.SubMenu>
         </Menu>
+        <Link href="/pc-builder">
+          <items
+            style={{
+              margin: "0px 25px",
+            }}
+          >
+            PC Builder
+          </items>
+        </Link>
       </Header>
-      <Content
-        style={{
-          padding: "30px 10px",
-        }}
-      >
+      <Content>
         <div
-          className="site-layout-content"
+          // className="site-layout-content"
           style={{
-            background: "white",
+            background: "azure",
             height: "100vh",
+            padding: "20px",
           }}
         >
           {children}

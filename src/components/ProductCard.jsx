@@ -12,6 +12,7 @@ const ProductCard = ({ product }) => (
   <Card
     style={{
       width: 300,
+      height: 420,
     }}
     size="small"
     cover={
