@@ -2,11 +2,11 @@ import RootLayout from "@/layouts/RootLayout";
 import { ProductDetails } from "@/layouts/UI/ProductDetails";
 import React from "react";
 
-const ProductDetailsPage = ({ product }) => {
+const ProductDetailsPage = (props) => {
   // console.log();
   return (
     <div>
-      <ProductDetails product={JSON.parse(product)} />
+      <ProductDetails product={props?.product} />
     </div>
   );
 };
@@ -20,13 +20,15 @@ ProductDetailsPage.getLayout = function getLayout(page) {
 export async function getStaticPaths() {
   const res = await fetch("http://localhost:3000/api/products");
   const productsData = await res.json();
-  // console.log(productsData);
+  // console.log("static paths data", productsData);
 
   const paths = productsData?.data?.map((product) => ({
     params: {
       productID: product?.id, // productID => same name as the file
     },
   }));
+
+  // console.log("static paths data", paths);
 
   return { paths, fallback: false };
 }
@@ -37,11 +39,13 @@ export async function getStaticProps(context) {
   const res = await fetch(
     `http://localhost:3000/api/products?productID=${params?.productID}`
   );
+
   const product = await res.json();
+  console.log("get prod", product);
 
   return {
     props: {
-      product: JSON.stringify(product),
+      product,
     },
     revalidate: 10,
   };
