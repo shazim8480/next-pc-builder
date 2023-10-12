@@ -16,7 +16,7 @@ HomePage.getLayout = function getLayout(page) {
 };
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/products");
+  const res = await fetch("https://next-pc-server.onrender.com/api/products");
   const productsData = await res.json();
 
   const featuredProducts = getRandomProducts(productsData?.data, 6);

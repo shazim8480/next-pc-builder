@@ -39,7 +39,7 @@ const ProductCard = ({ product }) => {
         <p>Rating : {product?.averageRating}</p>
       </div>
 
-      <Link href={`/product/${product?.id}`}>
+      <Link href={`/product/${product?._id}`}>
         <Button
           style={{
             backgroundColor: "navy",
