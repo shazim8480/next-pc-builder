@@ -4,15 +4,16 @@ import {
   EllipsisOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
-import { Avatar, Card } from "antd";
+import { Avatar, Button, Card } from "antd";
 import Image from "next/image";
+import Link from "next/link";
 const { Meta } = Card;
 
 const ProductCard = ({ product }) => (
   <Card
     style={{
       width: 300,
-      height: 420,
+      height: 470,
     }}
     size="small"
     cover={
@@ -35,6 +36,15 @@ const ProductCard = ({ product }) => (
       <p>Category : {product?.category}</p>
       <p>Rating : {product?.averageRating}</p>
     </div>
+
+    <Link href={`/product/${product?.id}`}>
+      <Button
+        style={{ backgroundColor: "navy", borderColor: "navy", color: "azure" }}
+        block
+      >
+        See Details
+      </Button>
+    </Link>
   </Card>
 );
 export default ProductCard;

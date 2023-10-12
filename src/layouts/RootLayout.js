@@ -74,7 +74,7 @@ const RootLayout = ({ children }) => {
           // className="site-layout-content"
           style={{
             background: "azure",
-            height: "100vh",
+            height: "150vh",
             padding: "20px",
           }}
         >

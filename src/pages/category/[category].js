@@ -16,6 +16,12 @@ const CategoryPage = ({ category, categoryProducts }) => {
   );
 };
 
+export default CategoryPage;
+
+CategoryPage.getLayout = function getLayout(page) {
+  return <RootLayout>{page}</RootLayout>;
+};
+
 export async function getStaticPaths() {
   // Generate paths at build time based on available categories
   const categories = [
@@ -53,9 +59,3 @@ export async function getStaticProps({ params }) {
     },
   };
 }
-
-export default CategoryPage;
-
-CategoryPage.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
-};
