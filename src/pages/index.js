@@ -1,10 +1,12 @@
 import RootLayout from "@/layouts/RootLayout";
+import FeaturedCategories from "@/layouts/UI/FeaturedCategories";
 import FeaturedProducts from "@/layouts/UI/FeaturedProducts";
 
 export default function HomePage({ featuredProducts }) {
   return (
     <main>
       <FeaturedProducts featuredProducts={featuredProducts} />
+      <FeaturedCategories />
     </main>
   );
 }

@@ -1,8 +1,13 @@
 import RootLayout from "@/layouts/RootLayout";
+import { ProductDetails } from "@/layouts/UI/ProductDetails";
 import React from "react";
 
 const ProductDetailsPage = ({ product }) => {
-  return <div>This is {product?.name} details page</div>;
+  return (
+    <div>
+      <ProductDetails product={product} />
+    </div>
+  );
 };
 
 export default ProductDetailsPage;

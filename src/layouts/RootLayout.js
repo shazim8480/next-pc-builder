@@ -1,6 +1,5 @@
 import React from "react";
 import { Breadcrumb, Dropdown, Layout, Menu, Space, theme } from "antd";
-import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { useRouter } from "next/router";
 const { Header, Content, Footer } = Layout;
@@ -73,8 +72,8 @@ const RootLayout = ({ children }) => {
         <div
           // className="site-layout-content"
           style={{
-            background: "azure",
-            height: "150vh",
+            background: "white",
+            height: "100%",
             padding: "20px",
           }}
         >
