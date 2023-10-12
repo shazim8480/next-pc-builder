@@ -16,10 +16,10 @@ HomePage.getLayout = function getLayout(page) {
 };
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:8000/products");
+  const res = await fetch("http://localhost:3000/api/products");
   const productsData = await res.json();
 
-  const featuredProducts = getRandomProducts(productsData, 6);
+  const featuredProducts = getRandomProducts(productsData?.data, 6);
 
   return {
     props: {

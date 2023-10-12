@@ -42,13 +42,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch("http://localhost:8000/products");
+  const res = await fetch("http://localhost:3000/api/products");
   const productsData = await res.json();
 
   const { category } = params;
 
   // Fetch products based on the selected category
-  const categoryProducts = productsData?.filter(
+  const categoryProducts = productsData?.data?.filter(
     (product) => product?.category === category
   );
 

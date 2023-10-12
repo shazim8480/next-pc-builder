@@ -3,9 +3,10 @@ import { ProductDetails } from "@/layouts/UI/ProductDetails";
 import React from "react";
 
 const ProductDetailsPage = ({ product }) => {
+  // console.log();
   return (
     <div>
-      <ProductDetails product={product} />
+      <ProductDetails product={JSON.parse(product)} />
     </div>
   );
 };
@@ -17,10 +18,11 @@ ProductDetailsPage.getLayout = function getLayout(page) {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:8000/products");
+  const res = await fetch("http://localhost:3000/api/products");
   const productsData = await res.json();
+  // console.log(productsData);
 
-  const paths = productsData?.map((product) => ({
+  const paths = productsData?.data?.map((product) => ({
     params: {
       productID: product?.id, // productID => same name as the file
     },
@@ -33,13 +35,13 @@ export async function getStaticProps(context) {
   // context => receive the params from static paths
   const { params } = context;
   const res = await fetch(
-    `http://localhost:8000/products/${params?.productID}`
+    `http://localhost:3000/api/products?productID=${params?.productID}`
   );
   const product = await res.json();
 
   return {
     props: {
-      product,
+      product: JSON.stringify(product),
     },
   };
 }
