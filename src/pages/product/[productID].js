@@ -18,15 +18,31 @@ ProductDetailsPage.getLayout = function getLayout(page) {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:3000/api/products");
-  const productsData = await res.json();
-  // console.log(productsData);
+  // const res = await fetch("http://localhost:3000/api/products");
+  // const productsData = await res.json();
+  // // console.log(productsData);
 
-  const paths = productsData?.data?.map((product) => ({
-    params: {
-      productID: product?.id, // productID => same name as the file
-    },
-  }));
+  // const paths = productsData?.data?.map((product) => ({
+  //   params: {
+  //     productID: product?.id, // productID => same name as the file
+  //   },
+  // }));
+  const paths = [
+    { params: { productID: "1" } },
+    { params: { productID: "2" } },
+    { params: { productID: "3" } },
+    { params: { productID: "4" } },
+    { params: { productID: "5" } },
+    { params: { productID: "6" } },
+    { params: { productID: "7" } },
+    { params: { productID: "8" } },
+    { params: { productID: "9" } },
+    { params: { productID: "10" } },
+    { params: { productID: "11" } },
+    { params: { productID: "12" } },
+    { params: { productID: "13" } },
+    // ... other paths
+  ];
 
   return { paths, fallback: false };
 }
